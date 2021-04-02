@@ -1,0 +1,305 @@
+@font-face {
+    font-family: GameFont;
+    src: url(../fonts/ANODETONOONE.TTF);
+}
+
+body {
+    background-image: url(../img/fundo.jpg);
+}
+
+#container {
+    width: 950px;
+    height: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fundoGame {
+    width: 950px;
+    height: 630px;
+    background-image: url(../img/fundo_game.jpg);
+    border-color: #FFF;
+    border-style: solid;
+    position: relative;
+    top: 75px;
+}
+
+#inicio {
+    width: 350px;
+    height: auto;
+    background-color: rgba(255,255,255, 0.85);
+    margin: 100px auto;
+    text-align: center;
+    padding: 10px;
+    border: 8px solid #236B8E;
+}
+
+#inicio .fnormal {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+#inicio i, #inicio span {
+    padding: 0 3px;
+    color: #FF0000;
+}
+
+#inicio span {
+    color: #FF0000;
+    font-weight: 600;
+}
+
+.game-start {
+    font-family: GameFont !important;
+    font-size: 30px !important;
+    font-weight: 600;
+    color: darkblue;
+    margin: 36px 0 18px 0;
+    cursor: pointer;
+}
+
+#inicio .titulo {
+    font-family: GameFont;
+    font-size: 40px;
+    color: darkblue;
+}
+
+#jogador {
+    width: 256px;
+    height: 66px;
+    position: absolute;
+    left: 8px;
+    top: 200px;
+    background-image: url(../img/player.png);
+}
+
+#jogador.anima {
+    background-image: url(../img/player.png);
+	animation: helicoptero .5s steps(2) infinite;
+	-webkit-animation: helicoptero .5s steps(2) infinite;
+	-moz-animation: helicoptero .5s steps(2) infinite;
+	-ms-animation: helicoptero .5s steps(2) infinite;
+	-o-animation: helicoptero .5s steps(2) infinite;
+}
+
+#disparo {
+    width: 50px;
+    height: 8px;
+    position: absolute;
+    background-image: url(../img/shoot.png);
+}
+
+#amigo {
+    width: 44px;
+    height: 51px;
+    position: absolute;
+    left: 10px;
+    top: 563px;
+    background-image: url(../img/friend.png);
+}
+
+#amigo.anima {
+    background-image:url(../img/friend.png);
+    animation: aliado .9s steps(12) infinite;
+    -webkit-animation: aliado .9s steps(12) infinite;
+    -moz-animation: aliado .9s steps(12) infinite;
+    -ms-animation: aliado .9s steps(12) infinite;
+    -o-animation: aliado .9s steps(12) infinite;
+}
+
+
+#inimigo1 {
+    width: 256px;
+    height: 66px;
+    position: absolute;
+    left: 689px;
+    top: 200px;
+    background-image: url(../img/enemy1.png);
+}
+
+#inimigo1.anima {
+    background-image: url(../img/enemy1.png);
+	animation: helicoptero .5s steps(2) infinite;
+	-webkit-animation: helicoptero .5s steps(2) infinite;
+	-moz-animation: helicoptero .5s steps(2) infinite;
+	-ms-animation: helicoptero .5s steps(2) infinite;
+	-o-animation: helicoptero .5s steps(2) infinite;
+}
+
+#inimigo2 {
+    width: 200px;
+    height: 149px;
+    position: absolute;
+    left: 721px;
+    top: 483px;
+    background-image: url(../img/inimigo2.png);
+}
+
+#explosao1, #explosao2 {
+    width: 15px;
+    height: 87px;
+    position: absolute;
+}
+
+#explosao3 {
+    width: 44px;
+    height: 51px;
+    position: absolute;
+}
+
+.anima4 {
+    width: 44px;
+    height: 51px;
+    background-image: url(../img/friend_dead.png);
+	animation: morteAmigo .5s steps(7) infinite;
+	-webkit-animation: morteAmigo .5s steps(7) infinite;
+	-moz-animation: morteAmigo .5s steps(7) infinite;
+	-ms-animation: morteAmigo .5s steps(7) infinite;
+	-o-animation: morteAmigo .5s steps(7) infinite;
+}
+
+#placar {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 590px;
+    display: flex;
+}
+
+#placar .text {
+    font-family: GameFont;
+    font-size: 20px;
+    color: #FFF;
+}
+
+#placar .pontos {
+    flex: 1;
+    padding-left: 25px;
+}
+
+#placar .resgates {
+    flex: 1;
+    text-align: center;
+}
+
+#placar .mortes {
+    flex: 1;
+    text-align: right;
+    padding-right: 25px;
+}
+
+#placar i {
+    padding-right: 5px;
+}
+
+#vida {
+    width: 140px;
+    height: 38px;
+    position: absolute;
+    left: 830px;
+    top: 7px;
+}
+
+#vida i {
+    font-size: 30px;
+    padding: 0 8px;
+    color: lightcoral;
+}
+
+
+
+#reinicia .text {
+    font-family: GameFont;
+    font-size: 20px;
+    color: #603A03;
+}
+
+#fim {
+    width: 350px;
+    height: 200px;
+    background-color: rgba(255,255,255, 0.85);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+#fim .end-game {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+    color: darkblue;
+}
+
+#fim .points {
+    font-family: GameFont;
+    font-size: 26px;
+    color: lightcoral;
+}
+
+/* helicóptero */
+@keyframes helicoptero {
+    from { background-position:    0px; }
+	  to { background-position: -512px; }
+}
+@-webkit-keyframes helicoptero {
+   	from { background-position:    0px; }
+   	  to { background-position: -512px; }
+}
+@-moz-keyframes helicoptero {
+   	from { background-position:    0px; }
+   	  to { background-position: -512px; }
+}
+@-ms-keyframes helicoptero {
+   	from { background-position:    0px; }
+   	  to { background-position: -512px; }
+}
+@-o-keyframes helicoptero {
+   	from { background-position:    0px; }
+   	  to { background-position: -512px; }
+}
+
+/* amigo */
+@keyframes aliado {
+	from { background-position:    0px; }
+	  to { background-position: -528px; }
+}
+@-webkit-keyframes aliado {
+   	from { background-position:    0px; }
+   	  to { background-position: -528px; }
+}
+@-moz-keyframes aliado {
+   	from { background-position:    0px; }
+   	  to { background-position: -528px; }
+}
+@-ms-keyframes aliado {
+   	from { background-position:    0px; }
+   	  to { background-position: -528px; }
+}
+@-o-keyframes aliado {
+   	from { background-position:    0px; }
+   	  to { background-position: -528px; }
+}
+
+/* morte amigo */
+@keyframes morteAmigo {
+    from { background-position:    0px; }
+	  to { background-position: -308px; }
+}
+@-webkit-keyframes morteAmigo {
+   	from { background-position:    0px; }
+   	  to { background-position: -308px; }
+}
+@-moz-keyframes morteAmigo {
+   	from { background-position:    0px; }
+   	  to { background-position: -308px; }
+}
+@-ms-keyframes morteAmigo {
+   	from { background-position:    0px; }
+   	  to { background-position: -308px; }
+}
+@-o-keyframes morteAmigo {
+   	from { background-position:    0px; }
+   	  to { background-position: -308px; }
+}
